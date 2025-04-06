@@ -141,7 +141,7 @@ const DroneFeed: React.FC<DroneFeedProps> = ({ isActive, isFullScreen = false })
     
     if (!showMap) {
       try {
-        const response = await fetch('http://localhost:5001/get-map');
+        const response = await fetch('https://map-route.onrender.com');
         if (response.ok) {
           const text = await response.text(); // Get HTML content as text
           const blob = new Blob([text], { type: 'text/html' });
